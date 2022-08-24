@@ -17,7 +17,6 @@ public class VideoGameController {
     @Autowired
     private VideoGameService service;
 
-    //Example endpoint to return count of all games on DB. Should return 10000 in Postman
     @GetMapping("/count")
     public long GetCount(){
         return service.GetCountOfGames();
