@@ -21,5 +21,13 @@ public class VideoGameController {
     public long GetCount(){
         return service.GetCountOfGames();
     }
+    @GetMapping("/all")
+    public List<VideoGame> findAll(){
+        return service.getAll();
+    }
+    @GetMapping("/getById/{id}")
+        public VideoGame findById(@PathVariable Integer id){
+            return service.getById(id);
+    }
 
 }
